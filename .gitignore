@@ -1,1 +1,2 @@
 node_modules
+// se eu por os nomes da pastas que não quero que vá para o git aqui(antes de serem alteradas) elas não são adicionadas para usar ainda mais o cache(como as 18.000 linhas a mais)

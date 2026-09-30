@@ -2,7 +2,7 @@ import pg from 'pg';
 
 const {Pool} = pg;
 
-const pool = new pool({
+const pool = new Pool({
     user: 'postgres.klghymtzqkjbarysueas',
     host: 'aws-0-sa-east-1.pooler.supabase.com',
     datebase: 'postgres',
