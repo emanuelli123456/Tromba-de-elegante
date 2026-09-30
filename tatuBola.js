@@ -46,26 +46,6 @@ app.get('/chamados/:id', async (req, res) => {
 //==========================7==========================================
 
 
-
-app.listen(3000, () => { console.log("Serviço aberto em http://localhost:3000") })
-
-
-import express from "express";
-import pool from "./tatuSuperBola";
-
-const app = express();
-
-// 1. Configura o Express para ler JSON no corpo (body) das requisições
-app.use(express.json()); 
-
-// 2. Middleware Global: Registra o log de todas as requisições
-app.use(registrarRequisicao);
-
-// OBSERVAÇÃO: O middleware validarChamado NÃO deve ser global (app.use), 
-// pois ele bloquearia rotas do tipo GET ou rotas de outros recursos.
-// O ideal é colocá-lo diretamente na rota de POST (cadastro).
-
-
 // --- SEUS MIDDLEWARES ---
 
 // Middleware de Log (Seu código corrigido)
@@ -117,3 +97,4 @@ app.post("/chamados", validarChamado, async (req, res) => {
 });
 
 
+app.listen(3000, () => { console.log("Serviço aberto em http://localhost:3000") })
