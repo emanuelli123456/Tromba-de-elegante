@@ -159,11 +159,12 @@ app.get('/chamados', async (req, res, next) => {
 
             return res.status(200).json(resultado.rows)
 
-        } catch (erro) {
-
-            next(erro)
         }
-    })
+    } catch (erro) {
+        next(erro)
+    }
+}
+)
 
 
 // ==========================================
